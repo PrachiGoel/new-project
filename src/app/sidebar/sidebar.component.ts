@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {AccordionModule} from 'primeng/primeng';     //accordion and accordion tab
-import {MenuItem} from 'primeng/primeng';
+
+
+import {MenuModule,MenuItem} from 'primeng/primeng';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,9 +10,24 @@ import {MenuItem} from 'primeng/primeng';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  // constructor() { }
+
+  item: MenuItem[];
 
   ngOnInit() {
+    this.item = [{
+      label: 'File',
+      items: [
+        {label: 'New', icon: 'fa-plus'},
+        {label: 'Open', icon: 'fa-download'}
+      ]
+    },
+      {
+        label: 'Edit',
+        items: [
+          {label: 'Undo', icon: 'fa-refresh'},
+          {label: 'Redo', icon: 'fa-repeat'}
+        ]
+      }];
   }
-
 }
