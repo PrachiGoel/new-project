@@ -1,3 +1,8 @@
 <footer>
   footer works!
+  <div class="ui-helper-clearfix" style="width:100%">
+    <button type="button" pButton icon="fa-plus" style="float:left" (click)="showDialogToAdd()" label="Add"></button>
+    <button type="button" pButton icon="fa-pencil-square-o" style="float:left" (click)="showDialogToEdit()" [disabled]="selectedUser == null" label="Edit"></button>
+    <button type="button" pButton icon="fa-close" style="float:left" (click)="delete()" [disabled]="selectedUser == null" label="Delete"></button>
+  </div>
 </footer>
